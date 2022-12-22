@@ -12,22 +12,21 @@ You need to run 3 tasks for this study, for each task a sample task has been pro
 
 # Executing the tasks
 
-## `.env` file
-`.env` file has most of the environment variables
+## Codespace environment
+Codespace has the following environment variables already set and you can acccess them from `process.env.{var_name}`
 ```properties
-COSMOS_ENDOINT=
-COSMOS_DATABASE=
-COSMOS_CONTAINER=
-EVENTHUB_NAME=
-```
+COSMOS_ENDPOINT  = <value>
+COSMOS_DATABASE = <value>
+COSMOS_CONTAINER = <value>
+COSMOS_KEY = <value>
 
-Three environment variables must be created before running the code
-```bash
-export AZURE_STORAGE_CONNECTION_STRING = <value>
-export COSMOS_KEY = <value>
-export EVENTHUB_CONNECTION_STRING = <value>
+CONTAINER_NAME = <value>
+AZURE_STORAGE_CONNECTION_STRING = <value>
+
+EVENTHUB_NAME = <value>
+EVENTHUB_CONNECTION_STRING = <value>
 ```
-These values will be provided to you by your study coordinator
+These values will be configured by your study coordinator
 
 ## Clean build directories
 ```bash
