@@ -7,9 +7,9 @@ import "dotenv/config"
 async function getCosmosDBContainerClient(): Promise<Container> {
     console.log("\nAuthenticating credentials for Azure CosmosDB and creating a container client");
 
-    const COSMOS_ENDOINT =
-        process.env.COSMOS_ENDOINT;
-    if (!COSMOS_ENDOINT) {
+    const COSMOS_ENDPOINT =
+        process.env.COSMOS_ENDPOINT;
+    if (!COSMOS_ENDPOINT) {
         throw Error('Azure CosmosDB Endpoint not found');
     }
     const COSMOS_KEY =
@@ -19,7 +19,7 @@ async function getCosmosDBContainerClient(): Promise<Container> {
     }
     const client = new CosmosClient({
         key: COSMOS_KEY,
-        endpoint: COSMOS_ENDOINT
+        endpoint: COSMOS_ENDPOINT
     });
 
     const COSMOS_DATABASE =
