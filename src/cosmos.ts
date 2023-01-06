@@ -63,8 +63,8 @@ async function findObjectsByElevation(elevation: number, limit: number): Promise
     // LIMIT 5 cuts off the result at 5 items
     // elevation and limit should be parameterized
     // The cosmos query to run
-    // SELECT * FROM collection c WHERE c.Elevation = 0 ORDER BY c.Country ASC OFFSET 0 LIMIT 5
-    // 
+    // SELECT * FROM collection c WHERE c.Elevation = <input-param-from-func> ORDER BY c.Country ASC OFFSET 0 LIMIT <input-param-from-func>
+    
 }
 
 upsertObject("7408d446-fb51-e70e-9955-560a0c966b68", 0);

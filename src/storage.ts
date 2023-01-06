@@ -59,7 +59,13 @@ async function getBlobDataAsString(blobName: string): Promise<void> {
 
 async function listBlobsInContainer(): Promise<void> {
   console.log("\nList of Blobs");
-  //TODO: Print the list blobs in the container
+  //TODO: Print the list blobs which are present in Azure storage container
+  // Container name can be accessed from the env
+  const CONTAINER_NAME = process.env.CONTAINER_NAME;
+  if (!CONTAINER_NAME) {
+      throw Error('Azure Storage Container name not found');
+  }
+
 }
 
 getBlobDataAsString("2022-12-22-09-00.txt");
